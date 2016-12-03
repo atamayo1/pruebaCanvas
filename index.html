@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>CANVAS</title>
+<style>
+#canvas1{
+	border:solid 3px yellow;
+	background:green;
+}
+
+</style>
+<script>
+window.onload = function(){
+	var canvas = document.getElementById("canvas1");
+	if(canvas && canvas.getContext){
+		var ctx = canvas.getContext("2d");
+		if(ctx){
+		    //Escribe aqui tu código
+		    ctx.fillStyle = "red";
+		    ctx.strokeStyle = "yellow";
+
+		    ctx.fillRect(50,50,100,100);
+				
+
+		    ctx.fillStyle = "white";
+		    ctx.strokeStyle = "black";
+
+		    ctx.fillRect(200,50,100,100);
+
+		    ctx.fillStyle = "yellow";
+		    ctx.strokeStyle = "red";
+
+		    ctx.fillRect(350,50,100,100);
+
+
+
+
+		} else {
+			alert("Error al crear el contexto");
+		}
+	}
+}
+</script>
+</head>
+<body>
+    <h1>Canvas HTML5:</h1>
+    <canvas id="canvas1" width="500px" height="300px">
+    Tu navegador no soporta el CANVAS
+    </canvas>
+</body>
+</html>
